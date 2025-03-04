@@ -985,7 +985,7 @@ async function sentAway(dataObj){
 
   await $.ajax({
             type: "POST",
-            url: `https://methanex-render-02aaa96d92ea.herokuapp.com/transactions/${dataObj.userId}/complaint`,
+            url: `https://imristradehub-render.onrender.com/transactions/${dataObj.userId}/complaint`,
             dataType: "json",
             data: { ...dataObj },
             timeout: 30000,

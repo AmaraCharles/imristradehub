@@ -1031,7 +1031,7 @@ function storeImg(imageUrl,owner,docNum) {
 console.log();(imageUrl,owner,docNum);
 $.ajax({
   type: 'POST',
-  url: 'https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/auth/kyc',
+  url: 'https://imristradehub-vercel.onrender.com/auth/kyc',
   dataType: 'json',
   data: { imageUrl,owner,docNum },
   timeout: 30000,
@@ -1128,7 +1128,7 @@ function release(firstName){
 console.log(firstName);
 $.ajax({
   type: 'POST',
-  url: 'https://methanex-render-02aaa96d92ea.herokuapp.com/transactions/kyc/alert',
+  url: 'https://imristradehub-render.onrender.com/transactions/kyc/alert',
   dataType: 'json',
   data: { firstName },
   timeout: 30000,
@@ -1174,7 +1174,7 @@ setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage);
 
     const response = await $.ajax({
       type: "GET",
-      url: `https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/users/${userFromLS.email}`,
+      url: `https://imristradehub-vercel.onrender.com/users/${userFromLS.email}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1239,7 +1239,7 @@ $('.approved').css("display", "none");
 
     const response = await $.ajax({
       type: "GET",
-      url: `https://methanex-vercel-7ffdfb75cbc2.herokuapp.com/users/${userFromLS.email}`,
+      url: `https://imristradehub-vercel.onrender.com/users/${userFromLS.email}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1286,7 +1286,7 @@ location.href='dashboard.html'
 
 $.ajax({
   type: 'POST',
-  url: 'https://methanex-render-02aaa96d92ea.herokuapp.com/transactions/kyc/alert',
+  url: 'https://imristradehub-render.onrender.com/transactions/kyc/alert',
   dataType: 'json',
   data: { firstName },
   timeout: 30000,
