@@ -1036,7 +1036,7 @@ $.ajax({
   data: { imageUrl,owner,docNum },
   timeout: 30000,
   success: function (data) {
-    console.log(data);
+ 
     $('.live-section').html('Picture was successfully uploaded').addClass('');
     setTimeout(function(){
 
@@ -1057,7 +1057,7 @@ $.ajax({
   },
   error: function (xhr, status, error) {
     
-    console.log(error);
+    ;
     $('.live-section').html('Error uploading image').addClass('alert-danger');
   },
 });
@@ -1134,12 +1134,12 @@ $.ajax({
   timeout: 30000,
   success: function (data) {
     alert(data)
-    console.log(data);
+ 
   
   },
   error: function (xhr, status, error) {
   
-    console.log(error);
+    ;
     $('.live-section').html('Error uploading image').addClass('alert-danger');
   },
 });
@@ -1292,12 +1292,12 @@ $.ajax({
   timeout: 30000,
   success: function (data) {
    
-    console.log(data);
+ 
   
   },
   error: function (xhr, status, error) {
    
-    console.log(error);
+    ;
     $('.live-section').html('Error uploading image').addClass('alert-danger');
   },
 });

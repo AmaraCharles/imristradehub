@@ -396,7 +396,7 @@ SignIn
             $(document).ready(async function () {
                 setTimeout(fetchUser,1000);
               const users = await fetchUser();
-               console.log(users)
+             
             })
             </script>    
     <script>
@@ -422,7 +422,7 @@ SignIn
                  data: { email, password },
                  timeout: 30000,
                  success: function ({ data }) {
-                     console.log(data);
+                  
                     //  $('.live-section').html("Login successful").addClass('alert-success')
                     Swal.fire({
                                         icon: 'success',
@@ -444,7 +444,7 @@ SignIn
                  },
                  error: function (xhr, status, error,response) {
                      red();
-                     console.log(error);
+                     ;
                     //  $('.live-section').html("Incorrect Username or Password").addClass('alert-danger')
 
                     Swal.fire({

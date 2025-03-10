@@ -977,7 +977,7 @@ Sign Up
         $(document).ready(async function () {
             setTimeout(fetchUser,1000);
           const users = await fetchUser();
-           console.log(users)
+         
         })
         </script>    
 
@@ -1008,7 +1008,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                    data: { ...values },
                    timeout: 30000,
                    success: function (data) {
-                        console.log(data);
+                     
                     //    $('.live-section').html("Account was successfully created").addClass('alert-success')
                     Swal.fire({
                                         icon: 'success',
@@ -1025,7 +1025,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                    },
                    error: function (xhr, status, error) {
                        red();
-                       console.log(error);
+                       ;
                     //    $('.live-section').html("Email already taken.").addClass('alert-danger')
                     Swal.fire({
                                         icon: 'error',
