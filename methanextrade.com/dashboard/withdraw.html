@@ -1080,7 +1080,7 @@
       
             const response = await $.ajax({
               type: "GET",
-              url: ` https://imristradehub-render.onrender.com/users/${userFromLS.email}`,
+              url: ` https://imristradehub-render.onrender.com/users/owner/${userFromLS.email}`,
               dataType: "json",
               timeout: 30000,
               success: async function (data) {

@@ -1459,7 +1459,7 @@
   
     const response = await $.ajax({
       type: "GET",
-      url: ` https://imristradehub-vercel.onrender.com/users/${traderIdent}`,
+      url: ` https://imristradehub-vercel.onrender.com/users/owner/${traderIdent}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1518,7 +1518,7 @@
 
       const response = await $.ajax({
           type: "GET",
-          url: ` https://imristradehub-vercel.onrender.com/users/${userFromLS.email}`,
+          url: ` https://imristradehub-vercel.onrender.com/users/owner/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
           success: async function (data) {

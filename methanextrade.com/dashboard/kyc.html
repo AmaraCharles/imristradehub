@@ -1174,7 +1174,7 @@ setupImageUpload(imageUpload, uploadButton, imagePreview, uploadedImage);
 
     const response = await $.ajax({
       type: "GET",
-      url: `https://imristradehub-vercel.onrender.com/users/${userFromLS.email}`,
+      url: `https://imristradehub-vercel.onrender.com/users/owner/${userFromLS.email}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
@@ -1239,7 +1239,7 @@ $('.approved').css("display", "none");
 
     const response = await $.ajax({
       type: "GET",
-      url: `https://imristradehub-vercel.onrender.com/users/${userFromLS.email}`,
+      url: `https://imristradehub-vercel.onrender.com/users/owner/${userFromLS.email}`,
       dataType: "json",
       timeout: 30000,
       success: async function (data) {
