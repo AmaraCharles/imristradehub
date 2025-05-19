@@ -26,9 +26,9 @@ moon-trader
 moon-vercel
 notify-bot
 notify-bot-batch-2-fix
-patextrade-render
-patextrade-trader
-patextrade-vercel
+Methtradehub-render
+Methtradehub-trader
+Methtradehub-vercel
 pluton-render
 pluton-trader
 pluton-vercel
