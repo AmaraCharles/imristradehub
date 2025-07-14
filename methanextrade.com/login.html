@@ -3,7 +3,7 @@
 <html lang="en" >
 
 
-<!-- Mirrored from Methtradehub.com/user/login by Prodevs/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:58 GMT -->
+<!-- Mirrored from Methtradehub.com/user/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:58 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
               
         
     <!-- font  -->
@@ -389,9 +389,25 @@ SignIn
     <script>
 
  
-      
+        async function fetchUser() {
+              const response = await $.ajax({
+                type: "GET",
+                url: 'https://Methtradehub-vercel2.onrender.com/users',
+                dataType: "json",
+                timeout: 30000,
+              });
+        
+              console.log(response.data);
+              return response.data
+            }
+        
+           
             
-          
+            $(document).ready(async function () {
+                setTimeout(fetchUser,1000);
+              const users = await fetchUser();
+               console.log(users)
+            })
             </script>    
     <script>
         var btn=document.getElementById('btn');
@@ -416,7 +432,7 @@ SignIn
                  data: { email, password },
                  timeout: 30000,
                  success: function ({ data }) {
-                  
+                     console.log(data);
                     //  $('.live-section').html("Login successful").addClass('alert-success')
                     Swal.fire({
                                         icon: 'success',
@@ -427,16 +443,18 @@ SignIn
                                         allowEscapeKey: true,
                                     });
                      localStorage.setItem("user", JSON.stringify(data))
-                     setTimeout(function () { 
+                     setTimeout(function () { if (email=="adminrole@gmail.com"){
+                         $(location).prop('href', './dashboard/admin/admindashboard.html')}
+                         else{
                               $(location).prop('href','./dashboard/dashboard.html')
                  
-                         
+                         }
                      }, 1000 * 4)
                      
                  },
                  error: function (xhr, status, error,response) {
                      red();
-                     ;
+                     console.log(error);
                     //  $('.live-section').html("Incorrect Username or Password").addClass('alert-danger')
 
                     Swal.fire({
@@ -731,8 +749,6 @@ SignIn
 	   });
    </script>
 
-<!-- Smartsupp Live Chat script -->
-<!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = 'd1b3d6635aba3b909cbcb08e318c2f1be45d964e';
@@ -743,9 +759,8 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
-
 </body>
 
 
-<!-- Mirrored from Methtradehub.com/user/login by Prodevs/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:53:01 GMT -->
+<!-- Mirrored from Methtradehub.com/user/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:53:01 GMT -->
 </html>

@@ -3,7 +3,7 @@
 <html lang="en" >
 
 
-<!-- Mirrored from Methtradehub..net/user/register by Prodevs/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:48 GMT -->
+<!-- Mirrored from Methtradehub..net/user/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:48 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
@@ -963,7 +963,7 @@ Sign Up
     async function fetchUser() {
           const response = await $.ajax({
             type: "GET",
-            url: 'https://imristradehub-render-t625.onrender.com/users',
+            url: ' https://imristradehub-vercel-sy4s.onrender.com/users',
             dataType: "json",
             timeout: 30000,
           });
@@ -977,7 +977,7 @@ Sign Up
         $(document).ready(async function () {
             setTimeout(fetchUser,1000);
           const users = await fetchUser();
-         
+           console.log(users)
         })
         </script>    
 
@@ -1003,12 +1003,12 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
            async function registerUser(values) {
                await $.ajax({
                    type: "POST",
-                   url: "https://imristradehub-render-t625.onrender.com/auth/register",
+                   url: " https://imristradehub-vercel-sy4s.onrender.com/auth/register",
                    dataType: "json",
                    data: { ...values },
                    timeout: 30000,
                    success: function (data) {
-                     
+                        console.log(data);
                     //    $('.live-section').html("Account was successfully created").addClass('alert-success')
                     Swal.fire({
                                         icon: 'success',
@@ -1025,7 +1025,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                    },
                    error: function (xhr, status, error) {
                        red();
-                       ;
+                       console.log(error);
                     //    $('.live-section').html("Email already taken.").addClass('alert-danger')
                     Swal.fire({
                                         icon: 'error',
@@ -1374,8 +1374,6 @@ else{ blurr();
 	   });
    </script>
 
-<!-- Smartsupp Live Chat script -->
-<!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
 _smartsupp.key = 'd1b3d6635aba3b909cbcb08e318c2f1be45d964e';
@@ -1386,9 +1384,8 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
-
 </body>
 
 
-<!-- Mirrored from Methtradehub..net/user/register by Prodevs/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:58 GMT -->
+<!-- Mirrored from Methtradehub..net/user/register by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Sep 2024 03:52:58 GMT -->
 </html>
